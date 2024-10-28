@@ -1,34 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct person {
 
-typedef struct person
+char name[50];
+int age;
+struct adresse local1;
+};
 
- {
- char nom [];
- int age;
-char  adresse adr  ;
- };
-
- typedef struct adresse
+struct adresse
 
   {
-  char rue [];
-  char ville [];
+  char rue [100];
+  char ville [100];
   int codepostal;
-  }
+  };
 
 int main () {
 
-struct person p1;
+person p1;
 
 p1.nom = 'youssef';
-p1.age = '24';
-p1.adresse ={'Riad Esala','Benimellal',2300};
-
-
-printf("personne: %d\n", p1.nom);
-
+p1.age =24;
+p1.local1.rue = 'riad';
+p1.local1.ville = 'beni mellal';
+p1.local1.codepostal = 23000;
 
 
 
